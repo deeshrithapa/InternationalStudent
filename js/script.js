@@ -13,15 +13,6 @@ fetch("components/header.html")
       nav.classList.toggle("show");
     });
   });
-// Mobile Navigation Toggle
-
-document.addEventListener("click", function (e) {
-  if (e.target.id === "menu-toggle") {
-    const nav = document.getElementById("nav-links");
-
-    nav.classList.toggle("active");
-  }
-});
 
 // Load Footer
 
