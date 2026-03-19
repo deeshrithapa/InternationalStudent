@@ -767,6 +767,166 @@ section {
 .offer-container.reverse .offer-content {
   order: 1;
 }
+/* ================================================= UNIVERSITY =================================================== */
+.universities-section {
+  padding: 60px 20px;
+  background: #f6f6f8;  /* same as services */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Label */
+.filter-container label {
+  display: block;
+  font-size: 14px;
+  color: #3a1f70;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Styled Select */
+#countryFilter {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: 2px solid #e7e0f8;
+  background-color: #ffffff;
+  color: #3a1f70;
+  cursor: pointer;
+  outline: none;
+  min-width: 220px;
+  transition: all 0.3s ease;
+
+  /* remove default styling (important) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* custom arrow using gradient */
+  background-image: 
+    linear-gradient(45deg, transparent 50%, #c8a94d 50%),
+    linear-gradient(135deg, #c8a94d 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Hover */
+#countryFilter:hover {
+  border-color: #c8a94d; /* gold */
+}
+
+/* Focus */
+#countryFilter:focus {
+  border-color: #5a33a2;
+  box-shadow: 0 0 0 3px rgba(90, 51, 162, 0.15);
+}
+
+/* Grid */
+#universities-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;   
+  margin: 0 auto;      
+}
+/* Card */
+.uni-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.uni-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content */
+.uni-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.uni-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #3a1f70;   /* same as section titles */
+  margin-bottom: 5px;
+}
+
+.uni-location {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.uni-courses,
+.uni-desc,
+.uni-fee {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+
+
+.uni-buttons {
+  margin-top: auto;  /* pushes buttons to bottom */
+  display: flex;
+  gap: 10px;
+}
+.btn-outline {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #5a33a2;   /* purple */
+  color: #5a33a2;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: #5a33a2;
+  color: #fff;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #c8a94d;   /* gold */
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #3c1c78;   /* dark purple */
+}
+
+
 /* ================================================= FOOTER =================================================== */
 
 .footer {

@@ -11,29 +11,65 @@
   <body>
     <!-- Navbar  -->
     <header class="header">
-  <nav class="navbar">
-    <div class="logo">
-      <div class="logo-icon">EB</div>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-icon">EB</div>
 
-      <div class="logo-text">
-        <h2>EduBridge International</h2>
-        <span>INTERNATIONAL STUDENT SUPPORT</span>
+          <div class="logo-text">
+            <h2>EduBridge International</h2>
+            <span>INTERNATIONAL STUDENT SUPPORT</span>
+          </div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About Us</a></li>
+          <li><a href="/pages/service.html">Services</a></li>
+          <li>
+            <a class="active" href="/pages/university.html">Universities</a>
+          </li>
+          <li>
+            <a class="cta" href="/pages/contact.html">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO CONTENT -->
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <p class="breadcrumb">
+          <a href="/index.html">Home</a> ›
+          <span>Universities</span>
+        </p>
+
+        <h1>Our Services</h1>
+        <p class="contact-subtext">
+          Book a free consultation with one of our expert advisors, or send us a
+          general enquiry. No account creation required.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a  href="/index.html">Home</a></li>
-      <li><a href="/pages/about.html">About Us</a></li>
-      <li><a  href="/pages/service.html">Services</a></li>
-      <li><a class="active" href="/pages/university.html">Universities</a></li>
-      <li><a class="cta" href="/pages/contact.html">Book a Consultation</a></li>
-    </ul>
-  </nav>
-</header>
-    <p>
-      dgsahkaj
-    </p>
+    <!-- UNIVERSITIES SECTION -->
+    <section class="universities-section">
+      <div class="container">
+        <h2 class="section-title">Explore Universities</h2>
 
-    
+        <!-- Filter -->
+        <div class="filter-container">
+          <label for="countryFilter">Filter by Country:</label>
+          <select id="countryFilter">
+            <option value="all">All Countries</option>
+          </select>
+        </div>
+
+        <!-- Cards Container (REQUIRED) -->
+        <div id="universities-container"></div>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="/js/universities.js"></script>
   </body>
 </html>
