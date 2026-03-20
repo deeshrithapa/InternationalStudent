@@ -40,7 +40,7 @@ function displayUniversities(data) {
 
     <div class="uni-buttons">
       <a href="${uni.website}" target="_blank" class="btn-outline">
-        Visit Website →
+        Visit Website 
       </a>
       <button class="btn-primary apply-btn">
         Start Application

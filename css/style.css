@@ -806,9 +806,7 @@ section {
   transition: all 0.3s ease;
 
   /* remove default styling (important) */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+
 
   /* custom arrow using gradient */
   background-image: 
