@@ -477,8 +477,7 @@ section {
   color: #f0eff1;
   border: 2px solid white;
 }
-/* =================================================== CONATACT PAGE ======================================================= */
-/* =========== CONTACT HERO =================== */
+/* ========================================================  HERO SECTION ==================================================== */
 
 .contact-hero {
   background: linear-gradient(135deg, #1a0636, #8a63ff);
@@ -488,60 +487,40 @@ section {
   position: relative;
   overflow: hidden;
 }
-
-/* subtle pattern effect */
-.contact-hero::before {
-  content: "+ + + + + + + + + +";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  color: rgba(255, 255, 255, 0.05);
-  font-size: 20px;
-  line-height: 40px;
-  transform: rotate(20deg);
-}
-
-/* content above pattern */
-.contact-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: auto;
-}
-
 /* breadcrumb */
 .breadcrumb {
   font-size: 14px;
   margin-bottom: 20px;
   opacity: 0.9;
 }
-
 .breadcrumb span {
   font-weight: bold;
 }
-
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
 /* heading */
 .contact-hero h1 {
   font-size: 64px;
   margin-bottom: 20px;
 }
-
 /* subtext */
 .contact-subtext {
   font-size: 18px;
-  line-height: 1.6;
   opacity: 0.9;
 }
+/* =================================================== CONATACT PAGE ======================================================= */
 
-/* ========================== CONTACT SECTION ========================== */
-
+/* contact section */
 .contact-section {
   background: #f4f4f6;
   padding: 80px 10%;
 }
-
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -553,15 +532,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-.breadcrumb a {
-  color: white;
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
 }
 
 /* CARD */
@@ -596,7 +566,6 @@ section {
 }
 
 .contact-card input,
-.contact-card select,
 .contact-card textarea {
   padding: 10px;
   border-radius: 6px;
@@ -606,7 +575,6 @@ section {
 
 .contact-card textarea {
   min-height: 80px;
-  resize: vertical;
 }
 
 /* BUTTON */
@@ -618,13 +586,20 @@ section {
   color: white;
   border-radius: 6px;
   font-weight: bold;
-  cursor: pointer;
 }
-
+.form-btn:hover {
+  background: transparent;
+  color: #4b2d87;
+  border: 2px solid #4b2d87;
+}
 .form-btn.outline {
   background: transparent;
   color: #4b2d87;
   border: 2px solid #4b2d87;
+}
+.form-btn.outline:hover {
+  background: #4b2d87;
+  color: white;
 }
 
 /* CONTACT INFO BOX */
@@ -638,29 +613,11 @@ section {
   margin-bottom: 15px;
   color: #3a1f70;
 }
-
 .contact-info p {
   font-size: 14px;
   margin-bottom: 12px;
 }
 
-/* SOCIAL ICONS */
-.socials {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-}
-
-.socials span {
-  width: 35px;
-  height: 35px;
-  background: #d6cffa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 12px;
-}
 /* ===================== WHAT WE OFFER ===================== */
 
 .offer {

@@ -1,4 +1,6 @@
+//  get container where university card will be displayed
 const container = document.getElementById("universities-container");
+// get dropdown where filter will be displayed
 const filter = document.getElementById("countryFilter");
 
 let universitiesData = [];
@@ -43,7 +45,7 @@ function displayUniversities(data) {
         Visit Website 
       </a>
       <button class="btn-primary apply-btn">
-        Start Application
+       Save
       </button>
     </div>
   </div>
@@ -51,7 +53,7 @@ function displayUniversities(data) {
 
     // Button click
     card.querySelector(".apply-btn").addEventListener("click", () => {
-      alert(`Application started for ${uni.name}`);
+      alert(`${uni.name} saved!`);
     });
     container.appendChild(card);
   });
