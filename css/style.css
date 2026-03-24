@@ -968,3 +968,124 @@ section {
   font-size: 13px;
   opacity: 0.8;
 }
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #4b2d87;
+  border-radius: 3px;
+}
+
+/* =======================================================
+   RESPONSIVE STYLES
+   Tablet  : max-width 1024px
+   Mobile  : max-width 768px
+   ======================================================= */
+
+/* ── TABLET (≤ 1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  .header { padding: 15px 30px; }
+  .hero { padding: 90px 40px; }
+  .hero h1 { font-size: 42px; }
+
+  /* 3-col grids → 2 col */
+  .services-grid,
+  .services-grid1,
+  #universities-container { grid-template-columns: repeat(2, 1fr); }
+
+  /* 4-col countries → 2 col */
+  .country-container { grid-template-columns: repeat(2, 1fr); }
+
+  /* about grid → 2 col */
+  .about-grid { grid-template-columns: repeat(2, 1fr); padding: 40px 30px 0; }
+
+  .footer { padding: 60px 40px 30px; }
+}
+
+
+/* ── MOBILE (≤ 768px) ──────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* --- Hamburger menu --- */
+  .header { padding: 15px 20px; position: relative; }
+
+  .hamburger { display: flex; z-index: 200; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #f4f4f6;
+    padding: 10px 20px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  .nav-links.open { display: flex; }
+
+  .nav-links li { border-bottom: 1px solid #e0e0e0; }
+  .nav-links li:last-child { border-bottom: none; }
+
+  .nav-links a,
+  .nav-links a.active,
+  .nav-links a.cta {
+    display: block;
+    padding: 12px 0;
+    background: none;
+    color: #333;
+    border-radius: 0;
+  }
+  .nav-links a.cta { color: #4b2d87; font-weight: 700; }
+
+  /* --- Hero --- */
+  .hero { padding: 70px 20px; text-align: center; }
+  .hero h1 { font-size: 32px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .book-btn, .uni-btn { width: 100%; text-align: center; }
+
+  /* --- Stats --- */
+  .stats-container { flex-wrap: wrap; }
+  .stat-item { flex: 1 1 45%; }
+  .stat-item:not(:last-child)::after { display: none; }
+
+  /* --- General sections --- */
+  section { padding: 60px 5%; }
+  .section-title { font-size: 28px; }
+
+  /* --- Process steps → stack --- */
+  .process-steps { flex-direction: column; gap: 40px; }
+  .step { width: 100%; }
+
+  /* --- All grids → 1 col --- */
+  .services-grid,
+  .services-grid1,
+  #universities-container,
+  .contact-container,
+  .main { grid-template-columns: 1fr; }
+
+  /* --- Offer section → stack --- */
+  .offer-container { grid-template-columns: 1fr; gap: 30px; }
+  .offer-container.reverse .offer-image,
+  .offer-container.reverse .offer-content { order: unset; }
+
+  /* --- About --- */
+  .about-grid { grid-template-columns: 1fr; padding: 30px 20px 0; }
+  .about-img { height: 280px; }
+
+  /* --- Footer --- */
+  .footer { padding: 50px 20px 30px; }
+  .footer-container { flex-direction: column; gap: 30px; }
+  .footer-right { flex-direction: column; gap: 25px; }
+}

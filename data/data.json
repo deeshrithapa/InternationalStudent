@@ -26,7 +26,7 @@
     "courses": "Engineering · Business · Social Sciences",
     "tuition": "£17,000/year",
     "description": "A leading UK university offering world-class education and research opportunities.",
-    "image": "../images/birmingham.jpg",
+    "image": "../images/Birmingham.jpg",
     "website": "https://www.birmingham.ac.uk"
   },
   {
@@ -36,7 +36,7 @@
     "courses": "Business · Engineering · Law",
     "tuition": "£17,500/year",
     "description": "A globally recognized university known for research excellence and strong graduate employability.",
-    "image": "../images/nottingham.jpg",
+    "image": "../images/Nottingham.jpg",
     "website": "https://www.nottingham.ac.uk"
   },
   {
@@ -45,8 +45,8 @@
     "city": "Glasgow",
     "courses": "Medicine · Arts · Engineering",
     "tuition": "£18,000/year",
-    "description": "One of the UK’s oldest universities with a strong reputation for teaching and research.",
-    "image": "../images/glasgow.jpg",
+    "description": "One of the UK's oldest universities with a strong reputation for teaching and research.",
+    "image": "../images/Glasgow.jpg",
     "website": "https://www.gla.ac.uk"
   },
   {
@@ -56,7 +56,7 @@
     "courses": "Arts · Business · Engineering",
     "tuition": "£16,500/year",
     "description": "A vibrant university known for excellent teaching and strong student satisfaction.",
-    "image": "../images/leeds.jpg",
+    "image": "../images/Leeds.jpg",
     "website": "https://www.leeds.ac.uk"
   },
   {
@@ -65,8 +65,8 @@
     "city": "Cambridge",
     "courses": "Business · Law · Politics",
     "tuition": "$45,000/year",
-    "description": "One of the world’s top universities known for leadership and academic excellence.",
-    "image": "../images/harvard.jpg",
+    "description": "One of the world's top universities known for leadership and academic excellence.",
+    "image": "../images/Harvard.jpg",
     "website": "https://www.harvard.edu"
   },
   {
@@ -76,7 +76,7 @@
     "courses": "Engineering · AI · Business",
     "tuition": "$50,000/year",
     "description": "A leading innovation hub located in Silicon Valley.",
-    "image": "../images/stanford.jpg",
+    "image": "../images/Stanford.jpg",
     "website": "https://www.stanford.edu"
   },
   {
@@ -105,8 +105,8 @@
     "city": "Toronto",
     "courses": "Health · IT · Business",
     "tuition": "$30,000/year",
-    "description": "Canada’s top university known for research and global recognition.",
-    "image": "../images/toronto.jpg",
+    "description": "Canada's top university known for research and global recognition.",
+    "image": "../images/Toronto.jpg",
     "website": "https://www.utoronto.ca"
   },
   {
@@ -136,7 +136,7 @@
     "courses": "Arts · Science · Medicine",
     "tuition": "$28,000/year",
     "description": "A prestigious institution with strong international reputation.",
-    "image": "../images/mcgill.jpg",
+    "image": "../images/McGill.jpg",
     "website": "https://www.mcgill.ca"
   },
   {
@@ -156,7 +156,7 @@
     "courses": "Engineering · Computer Science · Business",
     "tuition": "$31,000/year",
     "description": "Famous for co-op programs and strong industry connections in tech.",
-    "image": "../images/waterloo.jpg",
+    "image": "../images/Waterloo.jpg",
     "website": "https://uwaterloo.ca"
   },
   {
@@ -166,7 +166,7 @@
     "courses": "Business · Health Sciences · Law",
     "tuition": "$29,000/year",
     "description": "A top Canadian university known for leadership and student experience.",
-    "image": "../images/western.jpg",
+    "image": "../images/Western.jpg",
     "website": "https://www.uwo.ca"
   },
   {
@@ -176,7 +176,7 @@
     "courses": "Engineering · Health Sciences · Business",
     "tuition": "$27,000/year",
     "description": "A leading research university with strong academic excellence.",
-    "image": "../images/alberta.jpg",
+    "image": "../images/Alberta.jpg",
     "website": "https://www.ualberta.ca"
   },
   {
@@ -185,8 +185,8 @@
     "city": "Melbourne",
     "courses": "Business · Law · Medicine",
     "tuition": "$32,000/year",
-    "description": "Australia’s top-ranked university with a strong global reputation.",
-    "image": "../images/melbourne.jpg",
+    "description": "Australia's top-ranked university with a strong global reputation.",
+    "image": "../images/Melbourne.jpg",
     "website": "https://www.unimelb.edu.au"
   },
   {
@@ -195,8 +195,8 @@
     "city": "Sydney",
     "courses": "Engineering · Arts · Business",
     "tuition": "$31,000/year",
-    "description": "One of Australia’s oldest universities with world-class education.",
-    "image": "../images/sydney.jpg",
+    "description": "One of Australia's oldest universities with world-class education.",
+    "image": "../images/Sydney.jpg",
     "website": "https://www.sydney.edu.au"
   },
   {
@@ -206,7 +206,7 @@
     "courses": "Pharmacy · Engineering · IT",
     "tuition": "$30,000/year",
     "description": "A globally recognized university with strong research and innovation.",
-    "image": "../images/monash.jpg",
+    "image": "../images/Monash.jpg",
     "website": "https://www.monash.edu"
   },
   {
@@ -235,7 +235,7 @@
     "city": "Canberra",
     "courses": "Politics · Science · Economics",
     "tuition": "$34,000/year",
-    "description": "Australia’s national university with a strong focus on research and policy.",
+    "description": "Australia's national university with a strong focus on research and policy.",
     "image": "../images/Australian.jpg",
     "website": "https://www.anu.edu.au"
   }
