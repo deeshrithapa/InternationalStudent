@@ -1,69 +1,84 @@
-//  get container where university card will be displayed
-const container = document.getElementById("universities-container");
-// get dropdown where filter will be displayed
-const filter = document.getElementById("countryFilter");
+// ================== GET ELEMENTS ==================
 
+// Get container where university cards will be displayed
+const container = document.getElementById("universities-container");
+// Get dropdown filter
+const filter = document.getElementById("countryFilter");
+// Store university data
 let universitiesData = [];
 
-// Fetch data
+// ================== FETCH DATA ==================
+
 fetch("/data/data.json")
-  .then((res) => res.json())
-  .then((data) => {
-    universitiesData = data;
-    displayUniversities(data);
-    populateFilter(data);
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    universitiesData = data; // store data
+    displayUniversities(data); // show all universities
+    populateFilter(data); // fill dropdown
   });
 
-// Display cards
-function displayUniversities(data) {
-  container.innerHTML = "";
+// ================== DISPLAY UNIVERSITIES ==================
 
-  data.forEach((uni) => {
+function displayUniversities(data) {
+  container.innerHTML = ""; // clear old cards
+  // Loop through each university
+  data.forEach(function (uni) {
     const card = document.createElement("div");
     card.classList.add("uni-card");
-
+    // Add content
     card.innerHTML = `
-  <img src="${uni.image}" alt="${uni.name}" class="uni-img">
+      <img src="${uni.image}" alt="${uni.name}" class="uni-img">
 
-  <div class="uni-content">
-    <h3 class="uni-name">${uni.name}</h3>
-    <p class="uni-location">${uni.city}, ${uni.country}</p>
+      <div class="uni-content">
+        <h3 class="uni-name">${uni.name}</h3>
+        <p class="uni-location">${uni.city}, ${uni.country}</p>
 
-    <p class="uni-courses">
-      <strong>Available Courses:</strong><br>
-      ${uni.courses}
-    </p>
+        <p class="uni-courses">
+          <strong>Available Courses:</strong><br>
+          ${uni.courses}
+        </p>
 
-    <p class="uni-desc">${uni.description}</p>
+        <p class="uni-desc">${uni.description}</p>
 
-    <p class="uni-fee">
-      <strong>Tuition:</strong> ${uni.tuition}
-    </p>
+        <p class="uni-fee">
+          <strong>Tuition:</strong> ${uni.tuition}
+        </p>
 
-    <div class="uni-buttons">
-      <a href="${uni.website}" target="_blank" class="btn-outline">
-        Visit Website 
-      </a>
-      <button class="btn-primary apply-btn">
-       Save
-      </button>
-    </div>
-  </div>
-`;
+        <div class="uni-buttons">
+          <a href="${uni.website}" target="_blank" class="btn-outline">
+            Visit Website 
+          </a>
+          <button class="btn-primary apply-btn">
+            Save
+          </button>
+        </div>
+      </div>
+    `;
 
-    // Button click
-    card.querySelector(".apply-btn").addEventListener("click", () => {
-      alert(`${uni.name} saved!`);
+    // Button click event
+    const button = card.querySelector(".apply-btn");
+    button.addEventListener("click", function () {
+      alert(uni.name + " saved!");
     });
+    // Add card to page
     container.appendChild(card);
   });
 }
 
-// Populate dropdown
-function populateFilter(data) {
-  const countries = [...new Set(data.map((u) => u.country))];
+// ================== POPULATE FILTER ==================
 
-  countries.forEach((country) => {
+function populateFilter(data) {
+  const countries = [];
+  // Collect unique countries manually
+  data.forEach(function (uni) {
+    if (!countries.includes(uni.country)) {
+      countries.push(uni.country);
+    }
+  });
+  // Add countries to dropdown
+  countries.forEach(function (country) {
     const option = document.createElement("option");
     option.value = country;
     option.textContent = country;
@@ -71,14 +86,22 @@ function populateFilter(data) {
   });
 }
 
-// Filter logic
-filter.addEventListener("change", () => {
-  const selected = filter.value;
+// ================== FILTER LOGIC ==================
 
-  if (selected === "all") {
+filter.addEventListener("change", function () {
+  const selectedCountry = filter.value;
+  // If "all" selected → show everything
+  if (selectedCountry === "all") {
     displayUniversities(universitiesData);
   } else {
-    const filtered = universitiesData.filter((u) => u.country === selected);
-    displayUniversities(filtered);
+    const filteredUniversities = [];
+    // Manually filter data
+    universitiesData.forEach(function (uni) {
+      if (uni.country === selectedCountry) {
+        filteredUniversities.push(uni);
+      }
+    });
+
+    displayUniversities(filteredUniversities);
   }
 });
